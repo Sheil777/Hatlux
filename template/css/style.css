@@ -27,8 +27,7 @@ body {
   line-height: 1;
   font-size: 16px;
   color: #000;
-  font-family: "Tinos";
-  /* , serif; */
+  font-family: "Arial"; /* , serif; */
 }
 
 .wrapper {
@@ -37,11 +36,10 @@ body {
 }
 
 ._container {
-  max-width: 1110px;
+  max-width: 1200px;
   margin: 0px auto;
   padding: 0 15px;
-  box-sizing: content-box;
-  /* Сам прибавляет padding */
+  box-sizing: content-box; /* Сам прибавляет padding */
 }
 
 /*
@@ -60,5 +58,34 @@ body {
 }
  */
 /* ----------------------------------- */
-
-/*# sourceMappingURL=style.css.map */
+.header-top {
+  color: white;
+  background-color: #808080;
+  height: 52px;
+}
+.header-top a {
+  color: white;
+}
+.header-top__container {
+  height: inherit;
+  border: 1px solid wheat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-top__left {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-top__decoration {
+  height: inherit;
+  width: 1px;
+  border-left: 1px solid white;
+  margin: 0 70px;
+}
+.header-top__right {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}/*# sourceMappingURL=style.css.map */

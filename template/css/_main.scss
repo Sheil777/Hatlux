@@ -1,0 +1,36 @@
+.header-top {
+    color: white;
+    background-color: #808080;
+    height: 52px;
+
+    a {
+        color: white;
+    }
+
+    &__container {
+        height: inherit;
+        border: 1px solid wheat;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__decoration {
+        height: inherit;
+        width: 1px;
+        border-left: 1px solid white;
+        margin: 0 70px;
+    }
+
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+    }
+}
