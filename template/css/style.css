@@ -99,6 +99,9 @@ body {
   font-weight: 500;
 }
 
+.header-bottom a {
+  color: #000;
+}
 .header-bottom__flex {
   display: flex;
   justify-content: space-between;
@@ -143,6 +146,9 @@ body {
   padding-top: 2px;
 }
 
+.menu a {
+  color: #000;
+}
 .menu__container {
   display: flex;
   align-items: center;

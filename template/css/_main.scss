@@ -48,6 +48,10 @@
 }
 
 .header-bottom {
+    a {
+        color: #000;
+    }
+
      &__flex {
         display: flex;
         justify-content: space-between;
@@ -103,6 +107,10 @@
 }
 
 .menu {   
+    a {
+        color: #000;
+    }
+
     &__container {
         display: flex;
         align-items: center;
