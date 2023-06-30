@@ -9,6 +9,9 @@ $(document).ready(
 
         $('.menu__name').click(
             function (event) {
+                // Закрываем все открытые меню
+                $('.sub-menu').not($(this).siblings()).removeClass('open');
+
                 subMenu = event.target.nextElementSibling; // Под.меню
                 if(subMenu) {
                     $(subMenu).toggleClass('open');

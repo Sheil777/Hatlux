@@ -47,7 +47,6 @@
     }
 }
 
-
 .header-bottom {
      &__flex {
         display: flex;
@@ -62,12 +61,44 @@
         font-weight: bold;
      }
 
+     &__links {
+        display: flex;
+        align-items: center;
+     }
+
+     &__sell, &__buy {
+        display: flex;
+        align-items: center;
+        color: #000;
+     }
+
+     &__sell {
+        &::after {
+            margin: 0 10px;
+            display: inline-block;
+            content: "";
+            width: 1px;
+            height: 15px;
+            background-color: #000;
+        }
+     }
+
+     &__circles {
+        display: flex;
+        justify-content: space-between;
+        width: 78px;
+     }
+
      &__circle {
         height: 35px;
         width: 35px;
         border: 1px solid black;
         border-radius: 50%;
         background-color: white;
+
+        img {
+            padding-top: 2px;
+        }
      }
 }
 
@@ -85,6 +116,12 @@
         background-color: #D9D9D9;
         width: 100%;
         display: flex;
+    }
+
+    &__name {
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     &__ul {
@@ -177,18 +214,46 @@
         text-transform: none;
     }
 
-    &::after {
-        display: block;
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 5px;
-        width: 1px;
-        background-color: black;
-        height: calc(100% - 10px);
-        margin-top: 5px;
+    // &::after {
+    //     display: block;
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     right: 5px;
+    //     width: 1px;
+    //     background-color: black;
+    //     height: calc(100% - 10px);
+    //     margin-top: 5px;
+    // }
+
+    &__columns {
+        display: flex;
+    }
+
+    &__column {
+        padding-right: 30px;
+        padding-left: 10px;
+        position: relative;
+
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 5px;
+            width: 1px;
+            background-color: black;
+            height: calc(100% - 10px);
+            margin-top: 5px;
+        }
+    }
+
+    &__column:last-child::after {
+        display: none;
     }
 }
+
+
 
 .bonus {
     &__container {
@@ -271,6 +336,10 @@
         font-size: 12px;
         font-weight: bold;
         margin-top: 5px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -333,6 +402,7 @@
         border: 6px solid #808080;
         padding: 5px;
         font-size: 14px;
+        resize: none;
 
         &::placeholder {
             color: #D9D9D9;
@@ -359,8 +429,8 @@
         width: 130px;
         height: 20px;
         border-radius: 10px;
-        top: 37px;
         padding-left: 5px;
+        top: 37px;
     }
 
     &__cvet-l {
@@ -388,6 +458,29 @@
         font-weight: bold;
     }
 
+    &__whatsapp-l {
+        position: absolute;
+        top: 215px;
+        left: 20px;
+
+        input {
+            margin-left: 10px;
+            width: 150px;
+            height: 20px;
+        }
+    }
+
+    &__email-l {
+        position: absolute;
+        top: 215px;
+        left: 300px;
+
+        input {
+            margin-left: 10px;
+            width: 150px;
+            height: 20px;
+        }
+    }
 }
 
 .input {
@@ -429,7 +522,7 @@
   }
 }
 
-.footer-right{
+.footer-right {
     &__header {
         margin-top: 20px;
         font-size: 24px;
@@ -453,6 +546,67 @@
         font-weight: bold;
     }
 }
+
+.footer-menu {
+    .sub-menu {
+        top: auto;
+        bottom: 42px;
+    }
+
+    .sub-sub-menu {
+        top: auto;
+        bottom: 0;
+    }
+}
+
+// select {
+//     appearance: none;
+//     -moz-appearance: none;
+//     -webkit-appearance: none;
+// }
+
+// select::-ms-expand {
+//     display: none;
+// }
+
+// .select-wrapper {
+//     position: relative;
+// }
+
+// .select-wrapper::before {
+//     display: block;
+//     content: "";
+    
+//     position: absolute;
+//     top: 50%;
+//     right: 15px;
+//     transform: translateY(-50%);
+//     width: 10px;
+//     height: 10px;
+//     background-color: red;
+
+//     // Снять клик с треугольника
+//     pointer-events: none;
+
+//     background-image: url("template/img/select-arrow.png");
+// }
+
+// select {
+//     font: inherit;
+//     letter-spacing: inherit;
+//     word-spacing: inherit;
+//     -moz-appearance: none;
+//     -webkit-appearance: none;
+//     appearance: none;
+//   }
+  
+//   select:not([multiple]) {
+//     padding-right: 1.2em;
+//     background-repeat: no-repeat;
+//     background-position: calc(100% - 0.25em) 0.35em;
+//     background-size: 0.85em auto;
+//     background-image: url("template/img/select-arrow.png");
+//   }
 
 @media (max-width: 1200px) {
     .bonus {
